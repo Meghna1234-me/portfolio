@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #222;
+    transition: 0.4s;
+    padding-top: 70px; /* prevent fixed header from overlapping content */
+}
+
+/* Ensure anchor links and smooth scrolls account for fixed header */
+html {
+    scroll-padding-top: 80px;
+} 
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+} 
+
+header h1 {
+    color: #ffdd57;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #ffdd57;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+
+/* Show underline when the link is active (clicked) or explicitly has the .active class */
+nav a:active::after,
+nav a.active::after,
+nav a:focus-visible::after {
+    width: 100%;
+} 
+
+#themeToggle {
+    margin-left: 10px;
+    cursor: pointer;
+    background: none;
+    font-size: 18px;
+}
+
+/* Sections */
+.section {
+    min-height: 100vh;
+    padding: 120px 20px;
+    text-align: center;
+    background: white;
+    border-radius: 30px;
+    margin: 20px 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Home */
+#home {
+    background: linear-gradient(135deg, #e2ff9a, #fad0c4);
+    color: #222;
+}
+
+#home button {
+    margin-top: 20px;
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+
+/* Projects */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.project-card {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+    padding: 25px;
+    border-radius: 20px;
+    width: 280px;
+    color: #222;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: rotate(-2deg) scale(1.05);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+}
+
+/* Buttons */
+button {
+    padding: 12px 30px;
+    border: none;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Form */
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #667eea;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* 🌙 Dark Mode */
+.dark {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+}
+
+.dark .section {
+    background: #1f1f1f;
+    color: white;
+}
+
+.dark .project-card,
+.dark .skill {
+    color: white;
+}

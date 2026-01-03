@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bristi | YCSAS Intern</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>PORFOLIO✨</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#internship">Internship</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle">🌙</button>
+    </nav>
+</header>
+
+<section id="home" class="section">
+    <h2>Hello, I'm Meghna 👋</h2>
+    <h4>Web Development Intern at <strong>YCSAS</strong></h4>
+    <h4>I am learning to build clean and interactive websites using HTML, CSS, and JavaScript.</h4>
+    <button onclick="scrollToSection('contact')">Contact Me</button>
+</section>
+
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+        I am a passionate student with a strong interest in web development.
+        My career goal is to become a skilled frontend developer.
+        I joined the YCSAS Internship to gain real-world experience,
+        improve my technical skills, and work on practical projects.
+    </p>
+</section>
+
+<section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Git & GitHub</div>
+    </div>
+</section>
+
+<section id="internship" class="section">
+    <h2>YCSAS Internship</h2>
+    <p>
+        During my internship at <strong>YCSAS</strong>, I learned frontend web technologies
+        such as HTML, CSS, JavaScript, and React.
+        I gained hands-on experience by completing internship tasks,
+        building mini projects, and improving my problem-solving skills.
+    </p>
+</section>
+
+<section id="projects" class="section">
+    <h2>Projects & Tasks</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio created as the final task of YCSAS Internship.</p>
+        </div>
+        <div class="project-card">
+            <h3>Mini Web Projects</h3>
+            <p>Built small interactive websites using HTML, CSS, and JavaScript.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+        <p id="formMsg"></p>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Meghna | YCSAS Internship</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
